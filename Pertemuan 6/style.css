@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: #ffffff;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card utama kalkulator */
+.calculator {
+  width: 320px;
+  background-color: #0f172a;
+  padding: 20px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Bagian layar kalkulator */
+.display {
+  height: 130px;
+  background-color: #020617;
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.previous-number {
+  font-size: 18px;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.current-number {
+  font-size: 42px;
+  color: #ffffff;
+}
+
+/* Area tombol */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Style umum tombol */
+.btn {
+  height: 60px;
+  border: none;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #1e293b;
+  color: #ffffff;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background-color: #334155;
+  transform: scale(1.04);
+}
+
+/* Tombol angka */
+.number {
+  background-color: #1e293b;
+}
+
+/* Tombol operator */
+.operator {
+  background-color: #f59e0b;
+  color: #111827;
+}
+
+.operator:hover {
+  background-color: #d97706;
+}
+
+/* Tombol fungsi AC dan DEL */
+.function {
+  background-color: #64748b;
+  color: #ffffff;
+}
+
+.function:hover {
+  background-color: #475569;
+}
+
+/* Tombol sama dengan */
+.equal {
+  background-color: #22c55e;
+  color: #052e16;
+}
+
+.equal:hover {
+  background-color: #16a34a;
+}
+
+/* Tombol 0 dibuat lebih lebar */
+.zero {
+  grid-column: span 2;
+}
+
+/* Responsive untuk layar kecil */
+@media (max-width: 400px) {
+  .calculator {
+    width: 90%;
+  }
+
+  .btn {
+    height: 55px;
+    font-size: 18px;
+  }
+
+  .current-number {
+    font-size: 36px;
+  }
+}
